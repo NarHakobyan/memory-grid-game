@@ -27,7 +27,7 @@ class Cell extends Component {
         if (this.props.showActiveCells && this.active()) {
             className += ' active';
         }
-        if (this.guessState() !== undefined) className += ' guess-' + this.guessState();
+        if (this.guessState() !== undefined) className += ' animate guess-' + this.guessState();
         
         return (
             <div className={className} onClick={this.handleClick.bind(this)}>

@@ -3,7 +3,7 @@ import React from 'react';
 class Row extends React.Component {
     render() {
         return (
-            <div className="row">
+            <div className="one-row">
                 {this.props.children}
             </div>
         );

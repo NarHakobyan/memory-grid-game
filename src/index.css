@@ -1,6 +1,8 @@
+@import "~bootstrap/dist/css/bootstrap.css";
 
 body {
     text-align: center;
+    background-color: #aaa;
 }
 
 .cell {
