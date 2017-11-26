@@ -1,0 +1,30 @@
+
+body {
+    text-align: center;
+}
+
+.cell {
+    width: 100px;
+    height: 100px;
+    display: inline-block;
+    border: 1px solid #aaa;
+    background: #f8f8f8;
+    margin-right: 4px;
+}
+
+.active {
+    background-color: #058BDA;
+}
+
+.guess-true {
+    background-color: #00CC00;
+}
+
+.guess-false {
+    background-color: #CC0000
+}
+
+.footer {
+    font-size: 2.5em;
+}
+  
