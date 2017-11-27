@@ -7,6 +7,7 @@ class Container extends Component {
         let value = e.target.value;
         this.setState({ rows: value });
     };
+    
     validateRows = () => {
         let value = this.state.rows;
         if (value < 5) {
@@ -15,6 +16,7 @@ class Container extends Component {
         }
         this.setState({ rows: value });
     };
+    
     validateColumns = () => {
         let value = this.state.columns;
         if (value < 5) {
@@ -23,10 +25,12 @@ class Container extends Component {
         }
         this.setState({ columns: value });
     };
+    
     handleChangeColumns = (e) => {
         let value = e.target.value;
         this.setState({ columns: value });
     };
+    
     validateActiveCells = () => {
         let value = this.state.activeCellsCount;
         if (value < 6) {
@@ -39,10 +43,12 @@ class Container extends Component {
         }
         this.setState({ activeCellsCount: value });
     };
+    
     handleChangeActiveCellsCount = (e) => {
         let value = e.target.value;
         this.setState({ activeCellsCount: value });
     };
+    
     createNewGame = () => {
         this.setState({ gameId: this.state.gameId + 1 });
     };
@@ -55,14 +61,13 @@ class Container extends Component {
     render() {
         return (
             <div className="container">
-                
                 <div className="row">
                     <div className="col-lg-6">
                         <div className="input-group m-3">
                             <span className="input-group-btn">
                                 <span className="input-group-addon" id="sizing-addon1">Number of rows</span>
                             </span>
-                            <input type="text" value={this.state.rows} className="form-control m"
+                            <input type="text" value={this.state.rows} className="form-control"
                                    onChange={this.handleChangeRows} onBlur={this.validateRows}/>
                         </div>
                     </div>
@@ -73,7 +78,7 @@ class Container extends Component {
                             </span>
                             <input type="text"
                                    value={this.state.columns}
-                                   className="form-control m"
+                                   className="form-control"
                                    onChange={this.handleChangeColumns}
                                    onBlur={this.validateColumns}/>
                         </div>
@@ -85,7 +90,7 @@ class Container extends Component {
                             <span className="input-group-btn">
                                 <span className="input-group-addon" id="sizing-addon1">Number of active cells</span>
                             </span>
-                            <input type="text" value={this.state.activeCellsCount} className="form-control m"
+                            <input type="text" value={this.state.activeCellsCount} className="form-control"
                                    placeholder="Number of Cells count"
                                    onChange={this.handleChangeActiveCellsCount}
                                    onBlur={this.validateActiveCells}/>
@@ -93,7 +98,8 @@ class Container extends Component {
                     </div>
                     <div className="col-lg-offset-3 col-lg-6">
                         <div className="input-group m-3">
-                            <button onClick={this.createNewGame} className="btn btn-primary btn-lg btn-block">Go</button>
+                            <button onClick={this.createNewGame} className="btn btn-primary btn-lg btn-block">Go
+                            </button>
                         </div>
                     </div>
                 </div>

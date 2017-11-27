@@ -13,7 +13,7 @@ class Footer extends Component {
     playAgainButton() {
         if (['won', 'lost'].includes(this.props.gameState)) {
             return (
-                <button className="play-again-button"
+                <button className="btn btn-primary btn-lg btn-block"
                         onClick={this.props.playAgain}>
                     Play Again
                 </button>
